@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.875, 18.625" name="MITInvoice">
+  <DataContextMoniker Name="/MITInvoiceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="83c5305e-ad7d-44c0-8968-c4710024610f" isExpanded="false" absoluteBounds="1.5, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/PasswordLink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c8bcbd2-3324-4141-9a18-6df943cd0e41" absoluteBounds="1.5149999999999997, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="702440f3-b8d4-4fcc-bad9-ac8d85473dc8" isExpanded="false" absoluteBounds="1.375, 5.375, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/AttachmentMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="652ecd8c-16ed-4e82-865c-2d54a151db11" absoluteBounds="1.3900000000000006, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="533349a8-a272-4e48-ad33-542bbe28cda1" isExpanded="false" absoluteBounds="7.25, 4.875, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/CityMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1de3e987-1b3a-48a1-9fa4-6898fd9dd123" absoluteBounds="7.2650000000000006, 5.335, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="08ceb72a-e21d-4942-938c-12eb8a414ee2" isExpanded="false" absoluteBounds="7.25, 6.25, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/ClientContactMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ca10ae6-59b2-4729-b327-b6875a315120" absoluteBounds="7.2650000000000006, 6.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f97d939-5a07-4d87-8e98-8099efec190d" isExpanded="false" absoluteBounds="7.25, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/CountryMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8354a5b6-fb2c-4196-a42b-f6beabfe4d36" absoluteBounds="7.2650000000000006, 2.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.40625 : 2.575); (7.40625 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CountryMaster/CountryMaster_CityMaster" />
+      <nodes>
+        <classShapeMoniker Id="2f97d939-5a07-4d87-8e98-8099efec190d" />
+        <classShapeMoniker Id="533349a8-a272-4e48-ad33-542bbe28cda1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43af9db3-7ba5-48cc-ac4a-27e51e2196a5" isExpanded="false" absoluteBounds="7.25, 5.625, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/CurrencyMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78f1f48a-97ce-4d2c-abe5-37cb9dd1fba5" absoluteBounds="7.2650000000000006, 6.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a2546564-1551-459e-864f-15b0e233c491" isExpanded="false" absoluteBounds="7.25, 7.125, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/DepartmentMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05d9a29f-4647-4db8-846c-c9f34976249e" absoluteBounds="7.2650000000000006, 7.5850000000000009, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9021fb14-3558-464c-98e4-b5c4bddd2939" isExpanded="false" absoluteBounds="1.375, 4.75, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/FollowUpMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4b43ab1-0084-4c75-9ae2-a71d7d48ec48" absoluteBounds="1.3900000000000001, 5.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbd63471-15cc-417d-8dd5-8383d9df16be" isExpanded="false" absoluteBounds="4.875, 9.75, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/PriceMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d05ff17f-23b2-4dd2-9519-403c1d83063d" absoluteBounds="4.8900000000000006, 10.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78a4ec12-9908-467f-b810-63d717bc8c94" isExpanded="false" absoluteBounds="5.375, 8.75, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/PriceTypeMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af6268e9-3eff-4097-843a-1074e6502201" absoluteBounds="5.3900000000000006, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 9.2); (6.125 : 9.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/PriceTypeMaster/PriceTypeMaster_PriceMaster" />
+      <nodes>
+        <classShapeMoniker Id="78a4ec12-9908-467f-b810-63d717bc8c94" />
+        <classShapeMoniker Id="dbd63471-15cc-417d-8dd5-8383d9df16be" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f092808d-cb52-4cd6-8052-97e764dffd0e" isExpanded="false" absoluteBounds="7.25, 7.75, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/ProcessMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f93e6ddb-b746-4ac3-8b28-c070d8bee3df" absoluteBounds="7.2650000000000006, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5625 : 8.2); (8.5625 : 9.975); (6.875 : 9.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ProcessMaster/ProcessMaster_PriceMaster" />
+      <nodes>
+        <classShapeMoniker Id="f092808d-cb52-4cd6-8052-97e764dffd0e" />
+        <classShapeMoniker Id="dbd63471-15cc-417d-8dd5-8383d9df16be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 7.575); (8.25 : 7.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/DepartmentMaster/DepartmentMaster_ProcessMaster" />
+      <nodes>
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+        <classShapeMoniker Id="f092808d-cb52-4cd6-8052-97e764dffd0e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" isExpanded="false" absoluteBounds="7.625, 3.125, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/StateMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f42a3f2e-20d1-4a13-a021-ee68bb56af54" absoluteBounds="7.6400000000000006, 3.5850000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.90625 : 3.575); (8.90625 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/StateMaster/StateMaster_CityMaster" />
+      <nodes>
+        <classShapeMoniker Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" />
+        <classShapeMoniker Id="533349a8-a272-4e48-ad33-542bbe28cda1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.90625 : 2.575); (8.90625 : 3.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CountryMaster/CountryMaster_StateMaster" />
+      <nodes>
+        <classShapeMoniker Id="2f97d939-5a07-4d87-8e98-8099efec190d" />
+        <classShapeMoniker Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8c8d5ab6-b5cb-4a7e-a53c-46fba69eae16" isExpanded="false" absoluteBounds="1.25, 8.625, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/SentEmail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f112a821-3f68-4be1-b564-17ec1acbbe37" absoluteBounds="1.2650000000000001, 9.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5769f5f8-a92f-46e2-8fe3-35d8592a0e49" isExpanded="false" absoluteBounds="0.5, 3, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/EmailConfiguration" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ad98a98-1eab-4b5d-98f1-a861a29ac78b" absoluteBounds="0.51500000000000012, 3.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f3887f8-fa8f-4ca9-aac6-da97c4a7708f" isExpanded="false" absoluteBounds="1.375, 11.375, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/PriceTypeNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3106ab43-6b79-4913-bf1d-7b02e00f110b" absoluteBounds="1.3899999999999997, 11.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="513e8362-1e0e-4095-ad0c-dcb14f1f4d09" isExpanded="false" absoluteBounds="6.5, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/ProformaInvoiceDetailsMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e236f484-769b-48e5-947b-2424e3372d7c" absoluteBounds="6.515, 1.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2afaf39-bc2f-41d7-9668-28fa96f1dd07" isExpanded="false" absoluteBounds="3, 14, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/Individual_ContactMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62ff1c1e-00d9-40e8-8056-c7c49005b6bb" absoluteBounds="3.015, 14.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" isExpanded="false" absoluteBounds="5.625, 11.25, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/CompanyMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="270d2a41-6d94-440b-bed2-118030dc27f2" absoluteBounds="5.64, 11.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.34375 : 11.7); (7.34375 : 14.225); (6.38509026602564 : 14.225 : JumpStart); (6.21842359935898 : 14.225 : JumpEnd); (5 : 14.225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CompanyMaster/CompanyMaster_Individual_ContactMaster" />
+      <nodes>
+        <classShapeMoniker Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" />
+        <classShapeMoniker Id="b2afaf39-bc2f-41d7-9668-28fa96f1dd07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 6.075); (9.5 : 6.325); (9.5 : 11.125); (7.75761438461539 : 11.125); (7.625 : 11.2576143846154)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CurrencyMaster/CurrencyMaster_CompanyMaster" />
+      <nodes>
+        <classShapeMoniker Id="43af9db3-7ba5-48cc-ac4a-27e51e2196a5" />
+        <classShapeMoniker Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 7.55284515384615); (9.44107443490112 : 7.74391958874727 : JumpStart); (9.55892556509888 : 7.86177071894503 : JumpEnd); (9.65625 : 7.95909515384615); (9.65625 : 10.875); (9.58333333333333 : 10.875 : JumpStart); (9.41666666666667 : 10.875 : JumpEnd); (7.99273076923077 : 10.875); (6.30919230769231 : 11.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/DepartmentMaster/DepartmentMaster_CompanyMaster" />
+      <nodes>
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+        <classShapeMoniker Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1d7c56c1-f6c8-416a-b5c7-c7046eb2abbf" isExpanded="false" absoluteBounds="1.125, 6.125, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/InvoiceDetailsMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25b71447-00c6-49fc-807f-b90a947f976a" absoluteBounds="1.1400000000000001, 6.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ecf5108e-4939-4361-a905-97e83dee7fe9" absoluteBounds="5.875, 15.25, 2, 3.1170068359375">
+      <DataClassMoniker Name="/MITInvoiceDataContext/PaymentDetailsMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f0a852a-25cf-410a-8f34-1eb6e729766b" absoluteBounds="5.89, 15.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.4687475 : 14.45); (3.4687475 : 18.0568668619792); (5.875 : 18.0568668619792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/Individual_ContactMaster/Individual_ContactMaster_PaymentDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="b2afaf39-bc2f-41d7-9668-28fa96f1dd07" />
+        <classShapeMoniker Id="ecf5108e-4939-4361-a905-97e83dee7fe9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.546875 : 11.7); (7.546875 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CompanyMaster/CompanyMaster_PaymentDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" />
+        <classShapeMoniker Id="ecf5108e-4939-4361-a905-97e83dee7fe9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 14.45); (4 : 16.8085034179688); (5.875 : 16.8085034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/Individual_ContactMaster/Individual_ContactMaster_PaymentDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="b2afaf39-bc2f-41d7-9668-28fa96f1dd07" />
+        <classShapeMoniker Id="ecf5108e-4939-4361-a905-97e83dee7fe9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3859b873-f607-41fc-abd0-9815037148c2" isExpanded="false" absoluteBounds="5, 11.875, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/InvoiceMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61efeb10-46e9-46ca-a9db-ad6a3cec06a4" absoluteBounds="5.015, 12.335, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.00761438461538 : 11.875); (4.67135344971426 : 11.5387390650989 : JumpStart); (4.55350231951651 : 11.4208879349011 : JumpEnd); (4.23860931509888 : 11.1059949304835 : JumpStart); (4.12075818490112 : 10.9881438002857 : JumpEnd); (4.03886438461538 : 10.90625); (4.02864708333333 : 10.90625 : JumpStart); (3.86198041666667 : 10.90625 : JumpEnd); (3.75 : 10.90625); (3.75 : 6.2); (3.68392556509888 : 6.13392556509888 : JumpStart); (3.44107443490112 : 5.89107443490112 : JumpEnd); (3.375 : 5.825)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/InvoiceMaster/InvoiceMaster_AttachmentMaster" />
+      <nodes>
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+        <classShapeMoniker Id="702440f3-b8d4-4fcc-bad9-ac8d85473dc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.02215284615385 : 11.875); (4.67135344971426 : 11.5242006035604 : JumpStart); (4.55350231951651 : 11.4063494733627 : JumpEnd); (4.48860806509888 : 11.341455218945 : JumpStart); (4.37075693490112 : 11.2236040887473 : JumpEnd); (4.30340284615385 : 11.15625); (4.26301708333333 : 11.15625 : JumpStart); (3.86198041666667 : 11.15625 : JumpEnd); (3.8125 : 11.15625); (3.8125 : 5.6375); (3.68392556509888 : 5.50892556509888 : JumpStart); (3.44107443490112 : 5.26607443490112 : JumpEnd); (3.375 : 5.2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/InvoiceMaster/InvoiceMaster_FollowUpMaster" />
+      <nodes>
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+        <classShapeMoniker Id="9021fb14-3558-464c-98e4-b5c4bddd2939" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 11.956248); (3.70833333333333 : 11.956248 : JumpStart); (3.41666666666667 : 11.956248 : JumpEnd); (1.28125 : 11.956248); (1.28125 : 9.075)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/InvoiceMaster/InvoiceMaster_SentEmail" />
+      <nodes>
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+        <classShapeMoniker Id="8c8d5ab6-b5cb-4a7e-a53c-46fba69eae16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 12.243752); (3.67708333333333 : 12.243752 : JumpStart); (3.41666666666667 : 12.243752 : JumpEnd); (1.15625 : 12.243752); (1.15625 : 6.575)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/InvoiceMaster/InvoiceMaster_InvoiceDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+        <classShapeMoniker Id="1d7c56c1-f6c8-416a-b5c7-c7046eb2abbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.30175693269231 : 12.325); (6.30175693269231 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/InvoiceMaster/InvoiceMaster_PaymentDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+        <classShapeMoniker Id="ecf5108e-4939-4361-a905-97e83dee7fe9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2703b093-22e3-4695-b0be-c87efe27ce17" isExpanded="false" absoluteBounds="10.625, 4.25, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/ClientMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="982a8761-f03c-4210-a5fc-841f3270eb5e" absoluteBounds="10.64, 4.71, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.625 : 4.7); (11.625 : 6.475); (11.1770808333333 : 6.475 : JumpStart); (11.0104141666667 : 6.475 : JumpEnd); (9.58333333333333 : 6.475 : JumpStart); (9.41666666666667 : 6.475 : JumpEnd); (9.25 : 6.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ClientMaster/ClientMaster_ClientContactMaster" />
+      <nodes>
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+        <classShapeMoniker Id="08ceb72a-e21d-4942-938c-12eb8a414ee2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.0937475 : 4.7); (11.0937475 : 9.8312475); (9.73958333333333 : 9.8312475 : JumpStart); (9.57291666666667 : 9.8312475 : JumpEnd); (8.64583333333333 : 9.8312475 : JumpStart); (8.47916666666667 : 9.8312475 : JumpEnd); (6.875 : 9.8312475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ClientMaster/ClientMaster_PriceMaster" />
+      <nodes>
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+        <classShapeMoniker Id="dbd63471-15cc-417d-8dd5-8383d9df16be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.1562525 : 4.7); (12.1562525 : 12.1); (7.42708333333333 : 12.1 : JumpStart); (7.26041666666667 : 12.1 : JumpEnd); (7 : 12.1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ClientMaster/ClientMaster_InvoiceMaster" />
+      <nodes>
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 5.1); (10.82812125 : 5.1); (10.82812125 : 4.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CityMaster/CityMaster_ClientMaster" />
+      <nodes>
+        <classShapeMoniker Id="533349a8-a272-4e48-ad33-542bbe28cda1" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 4.9562475); (10.7447879166667 : 4.9562475 : JumpStart); (10.9114545833333 : 4.9562475 : JumpEnd); (11.0104141666667 : 4.9562475 : JumpStart); (11.1770808333333 : 4.9562475 : JumpEnd); (11.35937375 : 4.9562475); (11.35937375 : 4.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CityMaster/CityMaster_ClientMaster1" />
+      <nodes>
+        <classShapeMoniker Id="533349a8-a272-4e48-ad33-542bbe28cda1" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.4062505 : 2.575); (7.4062505 : 4.43350341796875); (7.69791666666667 : 4.43350341796875 : JumpStart); (7.86458333333333 : 4.43350341796875 : JumpEnd); (8.07291666666667 : 4.43350341796875 : JumpStart); (8.23958333333333 : 4.43350341796875 : JumpEnd); (8.82291666666667 : 4.43350341796875 : JumpStart); (8.98958333333333 : 4.43350341796875 : JumpEnd); (10.625 : 4.43350341796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CountryMaster/CountryMaster_ClientMaster" />
+      <nodes>
+        <classShapeMoniker Id="2f97d939-5a07-4d87-8e98-8099efec190d" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.4062505 : 2.575); (7.4062505 : 4.31049920898437); (7.69791666666667 : 4.31049920898437 : JumpStart); (7.86458333333333 : 4.31049920898437 : JumpEnd); (8.07291666666667 : 4.31049920898437 : JumpStart); (8.23958333333333 : 4.31049920898437 : JumpEnd); (8.82291666666667 : 4.31049920898437 : JumpStart); (8.98958333333333 : 4.31049920898437 : JumpEnd); (10.625 : 4.31049920898437)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CountryMaster/CountryMaster_ClientMaster1" />
+      <nodes>
+        <classShapeMoniker Id="2f97d939-5a07-4d87-8e98-8099efec190d" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 5.8187475); (11.0104141666667 : 5.8187475 : JumpStart); (11.1770808333333 : 5.8187475 : JumpEnd); (11.5416666666667 : 5.8187475 : JumpStart); (11.7083333333333 : 5.8187475 : JumpEnd); (11.89062625 : 5.8187475); (11.89062625 : 4.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/CurrencyMaster/CurrencyMaster_ClientMaster" />
+      <nodes>
+        <classShapeMoniker Id="43af9db3-7ba5-48cc-ac4a-27e51e2196a5" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 7.30767007692308); (9.41666666666667 : 7.30767007692308 : JumpStart); (9.58333333333333 : 7.30767007692308 : JumpEnd); (11.0104141666667 : 7.30767007692308 : JumpStart); (11.1770808333333 : 7.30767007692308 : JumpEnd); (12.0729191666667 : 7.30767007692308 : JumpStart); (12.2395858333333 : 7.30767007692308 : JumpEnd); (12.42187875 : 7.30767007692308); (12.42187875 : 4.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/DepartmentMaster/DepartmentMaster_ClientMaster" />
+      <nodes>
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 3.35); (11.093748 : 3.35); (11.093748 : 4.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/StateMaster/StateMaster_ClientMaster" />
+      <nodes>
+        <classShapeMoniker Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 3.4937525); (12.156252 : 3.4937525); (12.156252 : 4.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/StateMaster/StateMaster_ClientMaster1" />
+      <nodes>
+        <classShapeMoniker Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" isExpanded="false" absoluteBounds="3.875, 1, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/ProformaInvoiceMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b8896f4-c501-488e-8735-6a10ff6ad57c" absoluteBounds="3.8899999999999997, 1.46, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 1.35); (6.5 : 1.35)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ProformaInvoiceMaster/ProformaInvoiceMaster_ProformaInvoiceDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" />
+        <classShapeMoniker Id="513e8362-1e0e-4095-ad0c-dcb14f1f4d09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.86242838461538 : 1.45); (4.86242838461538 : 3.625); (4.64252564102564 : 3.625 : JumpStart); (4.47585897435897 : 3.625 : JumpEnd); (4.40669871794872 : 3.625 : JumpStart); (4.24003205128205 : 3.625 : JumpEnd); (4.12001602564103 : 3.625 : JumpStart); (3.95334935897436 : 3.625 : JumpEnd); (3.625 : 3.625); (3.625 : 12.11562625); (5 : 12.11562625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ProformaInvoiceMaster/ProformaInvoiceMaster_InvoiceMaster" />
+      <nodes>
+        <classShapeMoniker Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" />
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.359374 : 4.25); (11.359374 : 1.09375); (5.875 : 1.09375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/ClientMaster/ClientMaster_ProformaInvoiceMaster" />
+      <nodes>
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+        <classShapeMoniker Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 12.018753); (3.5625 : 12.018753); (3.5625 : 2.95); (3.95334935897436 : 2.95 : JumpStart); (4.12001602564103 : 2.95 : JumpEnd); (4.24003205128205 : 2.95 : JumpStart); (4.40669871794872 : 2.95 : JumpEnd); (4.77909505128205 : 2.95 : JumpStart); (4.94576171794872 : 2.95 : JumpEnd); (4.99999624358974 : 2.95 : JumpStart); (5.16666291025641 : 2.95 : JumpEnd); (5.3906235 : 2.95); (5.3906235 : 1.45)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/InvoiceMaster/InvoiceMaster_ProformaInvoiceMaster" />
+      <nodes>
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+        <classShapeMoniker Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" isExpanded="false" absoluteBounds="3.875, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/MITInvoiceDataContext/UserMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22f7caad-6d57-4f17-82c1-1115c1c4263a" absoluteBounds="3.8899999999999997, 4.335, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 4.325); (4.875 : 5.56879225510817); (4.84114583333333 : 5.56879225510817 : JumpStart); (3.41666666666667 : 5.56879225510817 : JumpEnd); (3.375 : 5.56879225510817)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_AttachmentMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="702440f3-b8d4-4fcc-bad9-ac8d85473dc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 4.20162440673828); (7.32291666666667 : 4.20162440673828 : JumpStart); (7.48958383333333 : 4.20162440673828 : JumpEnd); (7.69791666666667 : 4.20162440673828 : JumpStart); (7.86458333333333 : 4.20162440673828 : JumpEnd); (8.15625 : 4.20162440673828); (8.15625 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CityMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="533349a8-a272-4e48-ad33-542bbe28cda1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 3.98387480224609); (6.60807104166667 : 3.98387480224609 : JumpStart); (6.77473770833333 : 3.98387480224609 : JumpEnd); (7.32291666666667 : 3.98387480224609 : JumpStart); (7.48958383333333 : 3.98387480224609 : JumpEnd); (7.78125 : 3.98387480224609); (7.78125 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CityMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="533349a8-a272-4e48-ad33-542bbe28cda1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46461538461539 : 4.325); (5.46461538461539 : 6.52385986328125); (5.51041416666667 : 6.52385986328125 : JumpStart); (5.70833333333333 : 6.52385986328125 : JumpEnd); (5.76041416666667 : 6.52385986328125 : JumpStart); (5.92708083333333 : 6.52385986328125 : JumpEnd); (6.36197791666667 : 6.52385986328125 : JumpStart); (6.52864458333333 : 6.52385986328125 : JumpEnd); (7.25 : 6.52385986328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ClientContactMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="08ceb72a-e21d-4942-938c-12eb8a414ee2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 4.325); (5.625 : 6.64318243164062); (5.76041416666667 : 6.64318243164062 : JumpStart); (5.92708083333333 : 6.64318243164062 : JumpEnd); (6.36197791666667 : 6.64318243164062 : JumpStart); (6.52864458333333 : 6.64318243164062 : JumpEnd); (7.25 : 6.64318243164062)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ClientContactMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="08ceb72a-e21d-4942-938c-12eb8a414ee2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.32336538461538 : 3.875); (4.32336538461538 : 2.27812375); (4.77909505128205 : 2.27812375 : JumpStart); (4.94576171794872 : 2.27812375 : JumpEnd); (5.30729016666667 : 2.27812375 : JumpStart); (5.47395683333333 : 2.27812375 : JumpEnd); (5.61197841666667 : 2.27812375 : JumpStart); (5.77864508333333 : 2.27812375 : JumpEnd); (6.60807104166667 : 2.27812375 : JumpStart); (6.77473770833333 : 2.27812375 : JumpEnd); (6.86198041666667 : 2.27812375 : JumpStart); (7.02864708333333 : 2.27812375 : JumpEnd); (7.25 : 2.27812375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CountryMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="2f97d939-5a07-4d87-8e98-8099efec190d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.08332957692308 : 3.875); (5.08332957692308 : 2.457814375); (5.30729016666667 : 2.457814375 : JumpStart); (5.47395683333333 : 2.457814375 : JumpEnd); (5.61197841666667 : 2.457814375 : JumpStart); (5.77864508333333 : 2.457814375 : JumpEnd); (6.60807104166667 : 2.457814375 : JumpStart); (6.77473770833333 : 2.457814375 : JumpEnd); (6.86198041666667 : 2.457814375 : JumpStart); (7.02864708333333 : 2.457814375 : JumpEnd); (7.25 : 2.457814375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CountryMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="2f97d939-5a07-4d87-8e98-8099efec190d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.32336538461538 : 4.325); (4.32336538461538 : 5.87442993164062); (4.34634916666667 : 5.87442993164062 : JumpStart); (4.84114583333333 : 5.87442993164062 : JumpEnd); (4.89897435897436 : 5.87442993164062 : JumpStart); (5.06564102564103 : 5.87442993164062 : JumpEnd); (5.18229166666667 : 5.87442993164062 : JumpStart); (5.34895833333333 : 5.87442993164062 : JumpEnd); (5.38128205128205 : 5.87442993164062 : JumpStart); (5.92708083333333 : 5.87442993164062 : JumpEnd); (6.36197791666667 : 5.87442993164062 : JumpStart); (6.52864458333333 : 5.87442993164062 : JumpEnd); (7.25 : 5.87442993164062)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CurrencyMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="43af9db3-7ba5-48cc-ac4a-27e51e2196a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.08961538461539 : 4.325); (5.08961538461539 : 5.71846246582031); (5.18229166666667 : 5.71846246582031 : JumpStart); (5.34895833333333 : 5.71846246582031 : JumpEnd); (5.38128205128205 : 5.71846246582031 : JumpStart); (5.92708083333333 : 5.71846246582031 : JumpEnd); (6.36197791666667 : 5.71846246582031 : JumpStart); (6.52864458333333 : 5.71846246582031 : JumpEnd); (7.25 : 5.71846246582031)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CurrencyMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="43af9db3-7ba5-48cc-ac4a-27e51e2196a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.265625 : 4.325); (5.265625 : 7.35); (5.76041416666667 : 7.35 : JumpStart); (5.92708083333333 : 7.35 : JumpEnd); (6.36197791666667 : 7.35 : JumpStart); (6.52864458333333 : 7.35 : JumpEnd); (7.25 : 7.35)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_DepartmentMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.58423076923077 : 4.325); (4.58423076923077 : 7.2375); (4.67447916666667 : 7.2375 : JumpStart); (4.84114583333333 : 7.2375 : JumpEnd); (4.89897435897436 : 7.2375 : JumpStart); (5.06564102564103 : 7.2375 : JumpEnd); (5.18229166666667 : 7.2375 : JumpStart); (5.34895833333333 : 7.2375 : JumpEnd); (5.76041416666667 : 7.2375 : JumpStart); (5.92708083333333 : 7.2375 : JumpEnd); (6.36197791666667 : 7.2375 : JumpStart); (6.52864458333333 : 7.2375 : JumpEnd); (7.25 : 7.2375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_DepartmentMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.21093625 : 4.325); (4.21093625 : 7.4937525); (4.34634916666667 : 7.4937525 : JumpStart); (4.84114583333333 : 7.4937525 : JumpEnd); (4.89897435897436 : 7.4937525 : JumpStart); (5.06564102564103 : 7.4937525 : JumpEnd); (5.76041416666667 : 7.4937525 : JumpStart); (5.92708083333333 : 7.4937525 : JumpEnd); (6.36197791666667 : 7.4937525 : JumpStart); (6.52864458333333 : 7.4937525 : JumpEnd); (7.25 : 7.4937525)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_DepartmentMaster2" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.875 : 4.325); (3.68849494314662 : 4.48352929832537 : JumpStart); (3.43650505685338 : 4.69772070167463 : JumpEnd); (3.375 : 4.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_FollowUpMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="9021fb14-3558-464c-98e4-b5c4bddd2939" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.55297826923077 : 4.325); (4.55297826923077 : 9.975); (4.55729166666667 : 9.975 : JumpStart); (4.72395833333333 : 9.975 : JumpEnd); (4.875 : 9.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_PriceMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="dbd63471-15cc-417d-8dd5-8383d9df16be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.460935 : 4.325); (4.460935 : 9.8312475); (4.46964493589744 : 9.8312475 : JumpStart); (4.72395833333333 : 9.8312475 : JumpEnd); (4.875 : 9.8312475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_PriceMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="dbd63471-15cc-417d-8dd5-8383d9df16be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 4.23287690673828); (6.44531125 : 4.23287690673828); (6.44531125 : 8.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_PriceTypeMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="78a4ec12-9908-467f-b810-63d717bc8c94" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.8437475 : 4.325); (5.8437475 : 8.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_PriceTypeMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="78a4ec12-9908-467f-b810-63d717bc8c94" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.0781225 : 4.325); (4.0781225 : 8.0312525); (4.09635041666667 : 8.0312525 : JumpStart); (4.26301708333333 : 8.0312525 : JumpEnd); (4.34634916666667 : 8.0312525 : JumpStart); (4.72395833333333 : 8.0312525 : JumpEnd); (4.89897435897436 : 8.0312525 : JumpStart); (5.06564102564103 : 8.0312525 : JumpEnd); (5.76041416666667 : 8.0312525 : JumpStart); (5.92708083333333 : 8.0312525 : JumpEnd); (6.36197791666667 : 8.0312525 : JumpStart); (6.52864458333333 : 8.0312525 : JumpEnd); (7.25 : 8.0312525)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ProcessMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="f092808d-cb52-4cd6-8052-97e764dffd0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.7578125 : 4.325); (4.7578125 : 7.85937375); (4.89897435897436 : 7.85937375 : JumpStart); (5.06564102564103 : 7.85937375 : JumpEnd); (5.76041416666667 : 7.85937375 : JumpStart); (5.92708083333333 : 7.85937375 : JumpEnd); (6.36197791666667 : 7.85937375 : JumpStart); (6.52864458333333 : 7.85937375 : JumpEnd); (7.25 : 7.85937375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ProcessMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="f092808d-cb52-4cd6-8052-97e764dffd0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 3.95262230224609); (6.60807104166667 : 3.95262230224609 : JumpStart); (6.77473770833333 : 3.95262230224609 : JumpEnd); (7.32291666666667 : 3.95262230224609 : JumpStart); (7.48958383333333 : 3.95262230224609 : JumpEnd); (8.4999975 : 3.95262230224609); (8.4999975 : 3.575)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_StateMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 4.09274960449219); (6.60807104166667 : 4.09274960449218 : JumpStart); (6.77473770833333 : 4.09274960449219 : JumpEnd); (7.32291666666667 : 4.09274960449218 : JumpStart); (7.48958383333333 : 4.09274960449219 : JumpEnd); (7.69791666666667 : 4.09274960449218 : JumpStart); (7.86458333333333 : 4.09274960449219 : JumpEnd); (8.82291666666667 : 4.09274960449218 : JumpStart); (8.98958333333333 : 4.09274960449219 : JumpEnd); (9.2968775 : 4.09274960449219); (9.2968775 : 3.575)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_StateMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="97938ed4-d3ee-4600-9613-a8d1bab8c390" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.98230769230769 : 4.325); (4.98230769230769 : 8.65625); (4.72395833333333 : 8.65625 : JumpStart); (4.34634916666667 : 8.65625 : JumpEnd); (4.26301708333333 : 8.65625 : JumpStart); (3.41666666666667 : 8.65625 : JumpEnd); (3.25 : 8.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_SentEmail" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="8c8d5ab6-b5cb-4a7e-a53c-46fba69eae16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.94531375 : 4.325); (3.94531375 : 11.7859375); (3.70833333333333 : 11.7859375 : JumpStart); (3.41666666666667 : 11.7859375 : JumpEnd); (3.375 : 11.7859375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_PriceTypeNew" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="7f3887f8-fa8f-4ca9-aac6-da97c4a7708f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.03905875 : 4.325); (4.03905875 : 11.80546875); (3.70833333333333 : 11.80546875 : JumpStart); (3.41666666666667 : 11.80546875 : JumpEnd); (3.375 : 11.80546875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_PriceTypeNew1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="7f3887f8-fa8f-4ca9-aac6-da97c4a7708f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 3.92136980224609); (6.60807104166667 : 3.92136980224609 : JumpStart); (6.77473770833333 : 3.92136980224609 : JumpEnd); (6.94531375 : 3.92136980224609); (6.94531375 : 1.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ProformaInvoiceDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="513e8362-1e0e-4095-ad0c-dcb14f1f4d09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 4.26412940673828); (6.691404375 : 4.26412940673828); (6.691404375 : 1.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ProformaInvoiceDetailsMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="513e8362-1e0e-4095-ad0c-dcb14f1f4d09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.875 : 4.0687475); (3.70833333333333 : 4.0687475 : JumpStart); (3.54166666666667 : 4.0687475 : JumpEnd); (3.5 : 4.0687475); (3.5 : 14)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_Individual_ContactMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="b2afaf39-bc2f-41d7-9668-28fa96f1dd07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.875 : 4.19687375); (3.59375 : 4.19687375); (3.59375 : 14)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_Individual_ContactMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="b2afaf39-bc2f-41d7-9668-28fa96f1dd07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.726568 : 4.325); (5.726568 : 6.38946172178485); (5.70833333333333 : 6.38946172178485 : JumpStart); (5.38128205128205 : 6.38946172178485 : JumpEnd); (5.34895833333333 : 6.38946172178485 : JumpStart); (5.18229166666667 : 6.38946172178485 : JumpEnd); (5.06564102564103 : 6.38946172178485 : JumpStart); (4.89897435897436 : 6.38946172178485 : JumpEnd); (4.84114583333333 : 6.38946172178485 : JumpStart); (4.34634916666667 : 6.38946172178485 : JumpEnd); (4.29426958333333 : 6.38946172178485 : JumpStart); (3.41666666666667 : 6.38946172178485 : JumpEnd); (3.125 : 6.38946172178485)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_InvoiceDetailsMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="1d7c56c1-f6c8-416a-b5c7-c7046eb2abbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.9062525 : 4.325); (3.9062525 : 6.23573112627919); (3.89583333333333 : 6.23573112627918 : JumpStart); (3.72916666666667 : 6.23573112627919 : JumpEnd); (3.70833333333333 : 6.23573112627918 : JumpStart); (3.41666666666667 : 6.23573112627919 : JumpEnd); (3.125 : 6.23573112627919)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_InvoiceDetailsMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="1d7c56c1-f6c8-416a-b5c7-c7046eb2abbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.640625 : 4.325); (4.640625 : 11.54687625); (5.625 : 11.54687625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CompanyMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.4296825 : 4.325); (4.4296825 : 11.367185625); (4.43100513782051 : 11.367185625 : JumpStart); (4.72395833333333 : 11.367185625 : JumpEnd); (5.625 : 11.367185625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_CompanyMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="0d61205d-b3e3-418a-b1af-437f7bc9fec9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.17968375 : 4.325); (4.17968375 : 11.9249955); (5 : 11.9249955)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_InvoiceMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.61242788461538 : 4.325); (4.61242788461538 : 11.9875005); (5 : 11.9875005)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_InvoiceMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="3859b873-f607-41fc-abd0-9815037148c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 3.89818490112305); (6.60807104166667 : 3.89818490112304 : JumpStart); (6.77473770833333 : 3.89818490112305 : JumpEnd); (7.32291666666667 : 3.89818490112304 : JumpStart); (7.48958383333333 : 3.89818490112305 : JumpEnd); (8.82291666666667 : 3.89818490112304 : JumpStart); (8.98958333333333 : 3.89818490112305 : JumpEnd); (9.21354416666667 : 3.89818490112304 : JumpStart); (9.38021083333333 : 3.89818490112305 : JumpEnd); (11.0104146666667 : 3.89818490112304 : JumpStart); (11.1770813333333 : 3.89818490112305 : JumpEnd); (11.2760406666667 : 3.89818490112304 : JumpStart); (11.4427073333333 : 3.89818490112305 : JumpEnd); (11.757813 : 3.89818490112305); (11.757813 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ClientMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 3.96824855224609); (6.60807104166667 : 3.96824855224609 : JumpStart); (6.77473770833333 : 3.96824855224609 : JumpEnd); (7.32291666666667 : 3.96824855224609 : JumpStart); (7.48958383333333 : 3.96824855224609 : JumpEnd); (8.82291666666667 : 3.96824855224609 : JumpStart); (8.98958333333333 : 3.96824855224609 : JumpEnd); (9.21354416666667 : 3.96824855224609 : JumpStart); (9.38021083333333 : 3.96824855224609 : JumpEnd); (10.8281215 : 3.96824855224609); (10.8281215 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ClientMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="2703b093-22e3-4695-b0be-c87efe27ce17" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.03668269230769 : 3.875); (4.03668269230769 : 1.45)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ProformaInvoiceMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.69531175 : 3.875); (5.69531175 : 1.45)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_ProformaInvoiceMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="759250ff-fbc2-4e40-be16-bfc9df92e65b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 7.2062475); (6.52864458333333 : 7.2062475 : JumpStart); (6.36197791666667 : 7.2062475 : JumpEnd); (5.92708083333333 : 7.2062475 : JumpStart); (5.76041416666667 : 7.2062475 : JumpEnd); (5.5937475 : 7.2062475); (5.5937475 : 4.325)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MITInvoiceDataContext/DepartmentMaster/DepartmentMaster_UserMaster" />
+      <nodes>
+        <classShapeMoniker Id="a2546564-1551-459e-864f-15b0e233c491" />
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.55919230769231 : 3.875); (4.55919230769231 : 3.375); (4.77909505128205 : 3.375 : JumpStart); (4.94576171794872 : 3.375 : JumpEnd); (4.99999624358974 : 3.375 : JumpStart); (5.16666291025641 : 3.375 : JumpEnd); (5.44646153846154 : 3.375); (5.44646153846154 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_UserMaster" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.875 : 4.03457692307692); (3.75 : 4.03457692307692); (3.75 : 4.23084615384615); (3.875 : 4.23084615384615)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MITInvoiceDataContext/UserMaster/UserMaster_UserMaster1" />
+      <nodes>
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+        <classShapeMoniker Id="59bbaa9f-cadb-407e-8e7c-c2e4b5ecfcb1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

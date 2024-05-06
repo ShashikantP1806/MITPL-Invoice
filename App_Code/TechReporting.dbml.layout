@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TechReporting">
+  <DataContextMoniker Name="/TechReportingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="21d0f0e5-420e-4429-8257-894c6ea3796c" absoluteBounds="4.375, 1.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TechReportingDataContext/MITPLSiteEmailConfiguration" />
+      <nestedChildShapes>
+        <elementListCompartment Id="243116d9-0057-4fe2-8b2c-a1e0428554b9" absoluteBounds="4.39, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

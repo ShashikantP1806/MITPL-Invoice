@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MITPLInvoice" Class="MITInvoiceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SRV-SQL1\SQLEXPRESSNEW;Initial Catalog=MITPLInvoice;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MITPLInvoiceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PasswordLink" Member="PasswordLinks">
+    <Type Name="PasswordLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PasswordLink1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EmpCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateUsed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AttachmentMaster" Member="AttachmentMasters">
+    <Type Name="AttachmentMaster">
+      <Column Name="AttachmentId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AttachmentName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsInvoice" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="InvoiceMaster_AttachmentMaster" Member="InvoiceMaster" ThisKey="InvoiceId" OtherKey="InvoiceId" Type="InvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_AttachmentMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CityMaster" Member="CityMasters">
+    <Type Name="CityMaster">
+      <Column Name="CityId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StateId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CityMaster_ClientMaster" Member="ClientMasters" ThisKey="CityId" OtherKey="City1" Type="ClientMaster" />
+      <Association Name="CityMaster_ClientMaster1" Member="ClientMasters1" ThisKey="CityId" OtherKey="City2" Type="ClientMaster" />
+      <Association Name="CountryMaster_CityMaster" Member="CountryMaster" ThisKey="CountryId" OtherKey="CountryId" Type="CountryMaster" IsForeignKey="true" />
+      <Association Name="StateMaster_CityMaster" Member="StateMaster" ThisKey="StateId" OtherKey="StateId" Type="StateMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_CityMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_CityMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientContactMaster" Member="ClientContactMasters">
+    <Type Name="ClientContactMaster">
+      <Column Name="ClientContactId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CratedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDtae" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ClientMaster_ClientContactMaster" Member="ClientMaster" ThisKey="ClientId" OtherKey="ClientId" Type="ClientMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ClientContactMaster" Member="UserMaster" ThisKey="CratedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ClientContactMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CountryMaster" Member="CountryMasters">
+    <Type Name="CountryMaster">
+      <Column Name="CountryId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CountryMaster_CityMaster" Member="CityMasters" ThisKey="CountryId" OtherKey="CountryId" Type="CityMaster" />
+      <Association Name="CountryMaster_StateMaster" Member="StateMasters" ThisKey="CountryId" OtherKey="CountryId" Type="StateMaster" />
+      <Association Name="CountryMaster_ClientMaster" Member="ClientMasters" ThisKey="CountryId" OtherKey="Country1" Type="ClientMaster" />
+      <Association Name="CountryMaster_ClientMaster1" Member="ClientMasters1" ThisKey="CountryId" OtherKey="Country2" Type="ClientMaster" />
+      <Association Name="UserMaster_CountryMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_CountryMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurrencyMaster" Member="CurrencyMasters">
+    <Type Name="CurrencyMaster">
+      <Column Name="CurrencyId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CurrencyName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyCode" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencySymbol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CurrencyMaster_CompanyMaster" Member="CompanyMasters" ThisKey="CurrencyId" OtherKey="CurrencyType" Type="CompanyMaster" />
+      <Association Name="CurrencyMaster_ClientMaster" Member="ClientMasters" ThisKey="CurrencyId" OtherKey="CurrencyId" Type="ClientMaster" />
+      <Association Name="UserMaster_CurrencyMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_CurrencyMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepartmentMaster" Member="DepartmentMasters">
+    <Type Name="DepartmentMaster">
+      <Column Name="DepartmentId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DepartmentMaster_ProcessMaster" Member="ProcessMasters" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="ProcessMaster" />
+      <Association Name="DepartmentMaster_CompanyMaster" Member="CompanyMasters" ThisKey="DepartmentId" OtherKey="DepartmentID" Type="CompanyMaster" />
+      <Association Name="DepartmentMaster_ClientMaster" Member="ClientMasters" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="ClientMaster" />
+      <Association Name="DepartmentMaster_UserMaster" Member="UserMasters" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="UserMaster" />
+      <Association Name="UserMaster_DepartmentMaster" Member="UserMaster" ThisKey="UserId" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_DepartmentMaster1" Member="UserMaster1" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_DepartmentMaster2" Member="UserMaster2" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FollowUpMaster" Member="FollowUpMasters">
+    <Type Name="FollowUpMaster">
+      <Column Name="FollowId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FollowUpDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="InvoiceMaster_FollowUpMaster" Member="InvoiceMaster" ThisKey="InvoiceId" OtherKey="InvoiceId" Type="InvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_FollowUpMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceMaster" Member="PriceMasters">
+    <Type Name="PriceMaster">
+      <Column Name="PriceId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTypeMaster_PriceMaster" Member="PriceTypeMaster" ThisKey="PriceTypeId" OtherKey="PriceTypeId" Type="PriceTypeMaster" IsForeignKey="true" />
+      <Association Name="ProcessMaster_PriceMaster" Member="ProcessMaster" ThisKey="ProcessId" OtherKey="ProcessId" Type="ProcessMaster" IsForeignKey="true" />
+      <Association Name="ClientMaster_PriceMaster" Member="ClientMaster" ThisKey="ClientId" OtherKey="ClientId" Type="ClientMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_PriceMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_PriceMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTypeMaster" Member="PriceTypeMasters">
+    <Type Name="PriceTypeMaster">
+      <Column Name="PriceTypeId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTypeMaster_PriceMaster" Member="PriceMasters" ThisKey="PriceTypeId" OtherKey="PriceTypeId" Type="PriceMaster" />
+      <Association Name="UserMaster_PriceTypeMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_PriceTypeMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProcessMaster" Member="ProcessMasters">
+    <Type Name="ProcessMaster">
+      <Column Name="ProcessId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ProcessMaster_PriceMaster" Member="PriceMasters" ThisKey="ProcessId" OtherKey="ProcessId" Type="PriceMaster" />
+      <Association Name="DepartmentMaster_ProcessMaster" Member="DepartmentMaster" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="DepartmentMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ProcessMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ProcessMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StateMaster" Member="StateMasters">
+    <Type Name="StateMaster">
+      <Column Name="StateId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="StateMaster_CityMaster" Member="CityMasters" ThisKey="StateId" OtherKey="StateId" Type="CityMaster" />
+      <Association Name="StateMaster_ClientMaster" Member="ClientMasters" ThisKey="StateId" OtherKey="State1" Type="ClientMaster" />
+      <Association Name="StateMaster_ClientMaster1" Member="ClientMasters1" ThisKey="StateId" OtherKey="State2" Type="ClientMaster" />
+      <Association Name="CountryMaster_StateMaster" Member="CountryMaster" ThisKey="CountryId" OtherKey="CountryId" Type="CountryMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_StateMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_StateMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SentEmail" Member="SentEmails">
+    <Type Name="SentEmail">
+      <Column Name="SentID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MailTo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MailCC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MailBCC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AttachIDs" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MailSubject" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="MailBody" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MailSentBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MailSentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="InvoiceMaster_SentEmail" Member="InvoiceMaster" ThisKey="InvoiceID" OtherKey="InvoiceId" Type="InvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_SentEmail" Member="UserMaster" ThisKey="MailSentBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailConfiguration" Member="EmailConfigurations">
+    <Type Name="EmailConfiguration">
+      <Column Name="EConfigId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HOST" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PORT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HostUserName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HostPassword" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HostPasswordNew" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTypeNew" Member="PriceTypeNews">
+    <Type Name="PriceTypeNew">
+      <Column Name="PriceTypeId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="UserMaster_PriceTypeNew" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_PriceTypeNew1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProformaInvoiceDetailsMaster" Member="ProformaInvoiceDetailsMasters">
+    <Type Name="ProformaInvoiceDetailsMaster">
+      <Column Name="ProInvoiceDetailsId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProInvoiceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ItemDesc" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceType" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Decimal" DbType="Decimal(10,3)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(13,5)" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Decimal" DbType="Decimal(2,2)" CanBeNull="true" />
+      <Column Name="TotalAmt" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Modifydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ProformaInvoiceMaster_ProformaInvoiceDetailsMaster" Member="ProformaInvoiceMaster" ThisKey="ProInvoiceId" OtherKey="ProInvoiceId" Type="ProformaInvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ProformaInvoiceDetailsMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ProformaInvoiceDetailsMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Individual_ContactMaster" Member="Individual_ContactMasters">
+    <Type Name="Individual_ContactMaster">
+      <Column Name="IndividualID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Individual_ContactMaster_PaymentDetailsMaster" Member="PaymentDetailsMasters" ThisKey="IndividualID" OtherKey="IndividualName" Type="PaymentDetailsMaster" />
+      <Association Name="CompanyMaster_Individual_ContactMaster" Member="CompanyMaster" ThisKey="CompanyID" OtherKey="CompanyID" Type="CompanyMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_Individual_ContactMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_Individual_ContactMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceDetailsMaster" Member="InvoiceDetailsMasters">
+    <Type Name="InvoiceDetailsMaster">
+      <Column Name="InvoiceDetailsId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ItemDesc" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceType" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Decimal" DbType="Decimal(10,3)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(13,5)" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Decimal" DbType="Decimal(2,2)" CanBeNull="true" />
+      <Column Name="TotalAmt" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Modifydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProInvoiceDetailsId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="InvoiceMaster_InvoiceDetailsMaster" Member="InvoiceMaster" ThisKey="InvoiceId" OtherKey="InvoiceId" Type="InvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_InvoiceDetailsMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_InvoiceDetailsMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaymentDetailsMaster" Member="PaymentDetailsMasters">
+    <Type Name="PaymentDetailsMaster">
+      <Column Name="PaymentID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="InvoiceAmount" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="InvoiceCurrency" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="AmountReceived" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Consultant_Company" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IndividualName" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PaidCurrency" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PaidAmount" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="PaidDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Individual_ContactMaster_PaymentDetailsMaster" Member="Individual_ContactMaster" ThisKey="IndividualName" OtherKey="IndividualID" Type="Individual_ContactMaster" IsForeignKey="true" />
+      <Association Name="CompanyMaster_PaymentDetailsMaster" Member="CompanyMaster" ThisKey="Consultant_Company" OtherKey="CompanyID" Type="CompanyMaster" IsForeignKey="true" />
+      <Association Name="InvoiceMaster_PaymentDetailsMaster" Member="InvoiceMaster" ThisKey="InvoiceNo" OtherKey="InvoiceId" Type="InvoiceMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyMaster" Member="CompanyMasters">
+    <Type Name="CompanyMaster">
+      <Column Name="CompanyID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CurrencyType" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Com_M1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Com_M2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CompanyMaster_Individual_ContactMaster" Member="Individual_ContactMasters" ThisKey="CompanyID" OtherKey="CompanyID" Type="Individual_ContactMaster" />
+      <Association Name="CompanyMaster_PaymentDetailsMaster" Member="PaymentDetailsMasters" ThisKey="CompanyID" OtherKey="Consultant_Company" Type="PaymentDetailsMaster" />
+      <Association Name="CurrencyMaster_CompanyMaster" Member="CurrencyMaster" ThisKey="CurrencyType" OtherKey="CurrencyId" Type="CurrencyMaster" IsForeignKey="true" />
+      <Association Name="DepartmentMaster_CompanyMaster" Member="DepartmentMaster" ThisKey="DepartmentID" OtherKey="DepartmentId" Type="DepartmentMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_CompanyMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_CompanyMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceMaster" Member="InvoiceMasters">
+    <Type Name="InvoiceMaster">
+      <Column Name="InvoiceId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceSeqNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceNumber" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceFor" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Revision" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="PONumber" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PODate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvoiceStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectFrom" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AttachmentName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PaidDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvoiceStatus" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ApprovedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ApprovedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRevised" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProInvoiceId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="InvoiceMaster_AttachmentMaster" Member="AttachmentMasters" ThisKey="InvoiceId" OtherKey="InvoiceId" Type="AttachmentMaster" />
+      <Association Name="InvoiceMaster_FollowUpMaster" Member="FollowUpMasters" ThisKey="InvoiceId" OtherKey="InvoiceId" Type="FollowUpMaster" />
+      <Association Name="InvoiceMaster_SentEmail" Member="SentEmails" ThisKey="InvoiceId" OtherKey="InvoiceID" Type="SentEmail" />
+      <Association Name="InvoiceMaster_InvoiceDetailsMaster" Member="InvoiceDetailsMasters" ThisKey="InvoiceId" OtherKey="InvoiceId" Type="InvoiceDetailsMaster" />
+      <Association Name="InvoiceMaster_PaymentDetailsMaster" Member="PaymentDetailsMasters" ThisKey="InvoiceId" OtherKey="InvoiceNo" Type="PaymentDetailsMaster" />
+      <Association Name="InvoiceMaster_ProformaInvoiceMaster" Member="ProformaInvoiceMasters" ThisKey="InvoiceId" OtherKey="MainInvoiceID" Type="ProformaInvoiceMaster" />
+      <Association Name="ClientMaster_InvoiceMaster" Member="ClientMaster" ThisKey="ClientId" OtherKey="ClientId" Type="ClientMaster" IsForeignKey="true" />
+      <Association Name="ProformaInvoiceMaster_InvoiceMaster" Member="ProformaInvoiceMaster" ThisKey="ProInvoiceId" OtherKey="ProInvoiceId" Type="ProformaInvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_InvoiceMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_InvoiceMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientMaster" Member="ClientMasters">
+    <Type Name="ClientMaster">
+      <Column Name="ClientId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(600) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryEmail" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Skype" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Country1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="State1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="City1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Zip/Postal1]" Member="Zip_Postal1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Country2" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="State2" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="City2" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="[Zip/Postal2]" Member="Zip_Postal2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DefaultRecipient" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="DefaultCC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="C_M1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="C_M2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GSTIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ClientMaster_ClientContactMaster" Member="ClientContactMasters" ThisKey="ClientId" OtherKey="ClientId" Type="ClientContactMaster" />
+      <Association Name="ClientMaster_PriceMaster" Member="PriceMasters" ThisKey="ClientId" OtherKey="ClientId" Type="PriceMaster" />
+      <Association Name="ClientMaster_InvoiceMaster" Member="InvoiceMasters" ThisKey="ClientId" OtherKey="ClientId" Type="InvoiceMaster" />
+      <Association Name="ClientMaster_ProformaInvoiceMaster" Member="ProformaInvoiceMasters" ThisKey="ClientId" OtherKey="ClientId" Type="ProformaInvoiceMaster" />
+      <Association Name="CityMaster_ClientMaster" Member="CityMaster" ThisKey="City1" OtherKey="CityId" Type="CityMaster" IsForeignKey="true" />
+      <Association Name="CityMaster_ClientMaster1" Member="CityMaster1" ThisKey="City2" OtherKey="CityId" Type="CityMaster" IsForeignKey="true" />
+      <Association Name="CountryMaster_ClientMaster" Member="CountryMaster" ThisKey="Country1" OtherKey="CountryId" Type="CountryMaster" IsForeignKey="true" />
+      <Association Name="CountryMaster_ClientMaster1" Member="CountryMaster1" ThisKey="Country2" OtherKey="CountryId" Type="CountryMaster" IsForeignKey="true" />
+      <Association Name="CurrencyMaster_ClientMaster" Member="CurrencyMaster" ThisKey="CurrencyId" OtherKey="CurrencyId" Type="CurrencyMaster" IsForeignKey="true" />
+      <Association Name="DepartmentMaster_ClientMaster" Member="DepartmentMaster" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="DepartmentMaster" IsForeignKey="true" />
+      <Association Name="StateMaster_ClientMaster" Member="StateMaster" ThisKey="State1" OtherKey="StateId" Type="StateMaster" IsForeignKey="true" />
+      <Association Name="StateMaster_ClientMaster1" Member="StateMaster1" ThisKey="State2" OtherKey="StateId" Type="StateMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ClientMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ClientMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProformaInvoiceMaster" Member="ProformaInvoiceMasters">
+    <Type Name="ProformaInvoiceMaster">
+      <Column Name="ProInvoiceId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessUnit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="InvoiceSeqNo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceNumber" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceFor" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Revision" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="PONumber" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PODate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvoiceStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectFrom" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AttachmentName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PaidDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvoiceStatus" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ApprovedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ApprovedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRevised" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsApprovedByInvoice" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsApprovedDateInvoice" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MainInvoiceID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="ProformaInvoiceMaster_ProformaInvoiceDetailsMaster" Member="ProformaInvoiceDetailsMasters" ThisKey="ProInvoiceId" OtherKey="ProInvoiceId" Type="ProformaInvoiceDetailsMaster" />
+      <Association Name="ProformaInvoiceMaster_InvoiceMaster" Member="InvoiceMasters" ThisKey="ProInvoiceId" OtherKey="ProInvoiceId" Type="InvoiceMaster" />
+      <Association Name="ClientMaster_ProformaInvoiceMaster" Member="ClientMaster" ThisKey="ClientId" OtherKey="ClientId" Type="ClientMaster" IsForeignKey="true" />
+      <Association Name="InvoiceMaster_ProformaInvoiceMaster" Member="InvoiceMaster" ThisKey="MainInvoiceID" OtherKey="InvoiceId" Type="InvoiceMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ProformaInvoiceMaster" Member="UserMaster" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_ProformaInvoiceMaster1" Member="UserMaster1" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMaster" Member="UserMasters">
+    <Type Name="UserMaster">
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="UserType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="U_M1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="U_M2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsUserSentEmail" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProformaApproveAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="UserMaster_AttachmentMaster" Member="AttachmentMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="AttachmentMaster" />
+      <Association Name="UserMaster_CityMaster" Member="CityMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="CityMaster" />
+      <Association Name="UserMaster_CityMaster1" Member="CityMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="CityMaster" />
+      <Association Name="UserMaster_ClientContactMaster" Member="ClientContactMasters" ThisKey="UserId" OtherKey="CratedBy" Type="ClientContactMaster" />
+      <Association Name="UserMaster_ClientContactMaster1" Member="ClientContactMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="ClientContactMaster" />
+      <Association Name="UserMaster_CountryMaster" Member="CountryMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="CountryMaster" />
+      <Association Name="UserMaster_CountryMaster1" Member="CountryMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="CountryMaster" />
+      <Association Name="UserMaster_CurrencyMaster" Member="CurrencyMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="CurrencyMaster" />
+      <Association Name="UserMaster_CurrencyMaster1" Member="CurrencyMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="CurrencyMaster" />
+      <Association Name="UserMaster_DepartmentMaster" Member="DepartmentMasters" ThisKey="UserId" OtherKey="UserId" Type="DepartmentMaster" />
+      <Association Name="UserMaster_DepartmentMaster1" Member="DepartmentMasters1" ThisKey="UserId" OtherKey="CreatedBy" Type="DepartmentMaster" />
+      <Association Name="UserMaster_DepartmentMaster2" Member="DepartmentMasters2" ThisKey="UserId" OtherKey="ModifyBy" Type="DepartmentMaster" />
+      <Association Name="UserMaster_FollowUpMaster" Member="FollowUpMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="FollowUpMaster" />
+      <Association Name="UserMaster_PriceMaster" Member="PriceMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="PriceMaster" />
+      <Association Name="UserMaster_PriceMaster1" Member="PriceMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="PriceMaster" />
+      <Association Name="UserMaster_PriceTypeMaster" Member="PriceTypeMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="PriceTypeMaster" />
+      <Association Name="UserMaster_PriceTypeMaster1" Member="PriceTypeMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="PriceTypeMaster" />
+      <Association Name="UserMaster_ProcessMaster" Member="ProcessMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="ProcessMaster" />
+      <Association Name="UserMaster_ProcessMaster1" Member="ProcessMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="ProcessMaster" />
+      <Association Name="UserMaster_StateMaster" Member="StateMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="StateMaster" />
+      <Association Name="UserMaster_StateMaster1" Member="StateMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="StateMaster" />
+      <Association Name="UserMaster_SentEmail" Member="SentEmails" ThisKey="UserId" OtherKey="MailSentBy" Type="SentEmail" />
+      <Association Name="UserMaster_PriceTypeNew" Member="PriceTypeNews" ThisKey="UserId" OtherKey="CreatedBy" Type="PriceTypeNew" />
+      <Association Name="UserMaster_PriceTypeNew1" Member="PriceTypeNews1" ThisKey="UserId" OtherKey="ModifyBy" Type="PriceTypeNew" />
+      <Association Name="UserMaster_ProformaInvoiceDetailsMaster" Member="ProformaInvoiceDetailsMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="ProformaInvoiceDetailsMaster" />
+      <Association Name="UserMaster_ProformaInvoiceDetailsMaster1" Member="ProformaInvoiceDetailsMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="ProformaInvoiceDetailsMaster" />
+      <Association Name="UserMaster_Individual_ContactMaster" Member="Individual_ContactMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="Individual_ContactMaster" />
+      <Association Name="UserMaster_Individual_ContactMaster1" Member="Individual_ContactMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="Individual_ContactMaster" />
+      <Association Name="UserMaster_InvoiceDetailsMaster" Member="InvoiceDetailsMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="InvoiceDetailsMaster" />
+      <Association Name="UserMaster_InvoiceDetailsMaster1" Member="InvoiceDetailsMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="InvoiceDetailsMaster" />
+      <Association Name="UserMaster_CompanyMaster" Member="CompanyMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="CompanyMaster" />
+      <Association Name="UserMaster_CompanyMaster1" Member="CompanyMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="CompanyMaster" />
+      <Association Name="UserMaster_InvoiceMaster" Member="InvoiceMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="InvoiceMaster" />
+      <Association Name="UserMaster_InvoiceMaster1" Member="InvoiceMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="InvoiceMaster" />
+      <Association Name="UserMaster_ClientMaster" Member="ClientMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="ClientMaster" />
+      <Association Name="UserMaster_ClientMaster1" Member="ClientMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="ClientMaster" />
+      <Association Name="UserMaster_ProformaInvoiceMaster" Member="ProformaInvoiceMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="ProformaInvoiceMaster" />
+      <Association Name="UserMaster_ProformaInvoiceMaster1" Member="ProformaInvoiceMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="ProformaInvoiceMaster" />
+      <Association Name="UserMaster_UserMaster" Member="UserMasters" ThisKey="UserId" OtherKey="CreatedBy" Type="UserMaster" />
+      <Association Name="UserMaster_UserMaster1" Member="UserMasters1" ThisKey="UserId" OtherKey="ModifyBy" Type="UserMaster" />
+      <Association Name="DepartmentMaster_UserMaster" Member="DepartmentMaster" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="DepartmentMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_UserMaster" Member="UserMaster1" ThisKey="CreatedBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+      <Association Name="UserMaster_UserMaster1" Member="UserMaster2" ThisKey="ModifyBy" OtherKey="UserId" Type="UserMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

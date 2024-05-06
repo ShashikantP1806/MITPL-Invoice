@@ -1,0 +1,30 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+ <asp:GridView runat="server" Width="100%" Font-Names="Verdana"
+                            ShowFooter="True"                            
+                            CellPadding="4" 
+                            ForeColor="#333333" GridLines="Both" BorderStyle="Solid" BorderColor="#5D7B9D" RowStyle-Wrap="true" AlternatingRowStyle-Wrap="true">
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" VerticalAlign="Middle" HorizontalAlign="Left" Height="30px"  />
+                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" VerticalAlign="Middle" HorizontalAlign="Left"/>
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center"   CssClass="pager"  />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" VerticalAlign="Middle" HorizontalAlign="Left"/>
+                            <EditRowStyle BackColor="#999999" />
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" VerticalAlign="Middle" HorizontalAlign="Left" />
+                                </asp:GridView>
+                                <asp:TextBox runat="server" class="TextBox"/>
+<asp:DropDownList runat="server" class="DropDown"/>
+<asp:Button runat="server" class="buttonstyle"/>

@@ -1,0 +1,33 @@
+<h2>Legal Transcription</h2>
+<p style="text-align: justify;">MITPL is an established transcription company that provides accurate legal transcription at competitive price. This service involves developing court reports from dictated or written information. This service is performed by specialists in the field having good hands-on experiences. This is a very time consuming and error-prone task and requires immense attention and capabilities.</p>
+<p style="text-align: justify;">Our legal transcription services abridge the work of court reporters and other legal and paralegal professionals leaving them free to focus on their core activities. We have good industry experience, capabilities, and all the essential resources to assist you with the preparation of legal documents.</p>
+<p style="text-align: justify;"><strong>Using state-of-the-art-technology, we prepare all types of legal documents including:</strong></p>
+
+<div style="padding-left: 20px;">
+<ul>
+	<li>Deposition Summary</li>
+	<li>Legal Memos</li>
+	<li>Mediations/Arbitrations</li>
+	<li>Legal Correspondence</li>
+</ul>
+</div>
+<p style="text-align: justify;">Our legal transcriptionists pay immense attention to your judicial proceedings and transcribe them ensuring high level of accuracy within stipulated turnaround time. Our QA team ensures that they go through a three level quality check to ensure the accuracy and consistency of the transcribed files. The transcribed files are delivered in MS-Word or in any format you require.</p>
+<strong>Our Service Highlights</strong>
+<div style="padding-left: 20px;">
+<ul>
+	<li>Trained and experienced workforce</li>
+	<li>Resolution and Stringent three-tier quality assurance</li>
+	<li>processes</li>
+	<li>Resolution and Assured accuracy rate of 99% (with clear audio)</li>
+	<li>Resolution and Customized turnaround time</li>
+	<li>Resolution and Competitive pricing</li>
+	<li>Resolution and Capability to work on a wide range of file</li>
+	<li>formats</li>
+	<li>Resolution and Free trial offer</li>
+</ul>
+</div>
+<strong>Services and Samples</strong>
+<p style="text-align: justify;"><u><b><a href="pdffiles/Deposition%20Summary.pdf">Deposition Summary</a></b></u> - A deposition summary is a brief document going over the basic information from a deposition, testimony taken before a trial to help legal teams prepare.</p>
+<p style="text-align: justify;"><u><b><a href="pdffiles/Legal%20Memos.pdf">Legal Memos</a></b></u> - A legal memo or a legal memorandum is a specific type of essay dealing with a legal issue. The legal memo is usually written and researched by a paralegal, a law student, or lawyer.</p>
+<p style="text-align: justify;"><u><b><a href="pdffiles/Mediations.pdf">Mediations</a></b></u> - Mediation is a form of legal document of dispute resolution. It is the private, judicial determination of a dispute, by an independent third party. In this the mediator assists the parties to negotiate their own settlement.</p>
+<p style="text-align: justify;"><u><b><a href="pdffiles/Legal%20Correspondence.pdf">Legal Correspondence</a></b></u> - Legal correspondences are letters that are written and exchanged between opposing attorneys in a case.</p>

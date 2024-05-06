@@ -1,0 +1,285 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MITPL e-Invoice System</title>
+    <link href="css/Invoice.css" rel="stylesheet" type="text/css" />
+    <link id="Link1" runat="server" rel="shortcut icon" href="images/NewLogo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <script src="js/functions.js" type="text/javascript"></script>
+
+    <style>
+        .highlight
+        {
+            text-decoration: none;
+            background: yellow;
+        }
+    </style>
+    <style type="text/css">
+        .pager span
+        {
+            color: white;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function GetPageURL() {
+            if (document.URL.indexOf("NewInvoice") != -1)
+                return confirm('Are you sure, you want to leave this page?');
+        }
+
+        function searchKeyPress(e) {
+            // look for window.event in case event isn't passed in
+            if (typeof e == 'undefined' && window.event) { e = window.event; }
+            if (e.keyCode == 13) {
+                document.getElementById('btnSearch').click();
+            }
+        }
+
+        function getSelText() {
+            var txt = '';
+            if (window.getSelection) {
+                txt = window.getSelection();
+            }
+            else if (document.getSelection) {
+                txt = document.getSelection();
+            }
+            else if (document.selection) {
+                txt = document.selection.createRange().text;
+            }
+            else {
+                return;
+            }
+            document.getElementById('selected').innerHTML = txt;
+        }
+
+        document.onmousemove = getSelText;   
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+    </asp:ToolkitScriptManager>
+    <div id="wrapper">
+        <!-- shell -->
+        <div class="shell">
+            <!-- container -->
+            <div class="container">
+                <!-- header -->
+                <header class="header">                
+					<%--<h1 id="logo"><a href="home.aspx">MITPL e-Invoice System</a></h1>--%>
+					<h1 id="logo"><img src="css/images/MITPL logo.gif" height="75px" /></h1>
+                    <a href="Login.aspx" id="loginntn" runat="server" style="float:right;" visible="false" >Login</a>
+					<nav id="navigation">
+						<ul id="mainmenu" runat="server">
+							<li id="liHomeMenu" runat="server" class="active">
+							    <asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Home" Target="_self" onclick="lnkHome_Click" OnClientClick="return GetPageURL();">Home</asp:HyperLink>
+							</li>
+							<li id="liUserMenu" runat="server">
+							    <%--<asp:LinkButton ID="lnkUserMenu" runat="server" href="" onclick="lnkUserMenu_Click">User<span></span></asp:LinkButton>--%>
+							    <a href="#">User<span></span></a>
+						        <ul>
+							        <li>
+							            <asp:HyperLink ID="lnkManageUsers" runat="server" NavigateUrl="~/ManageUsers"  Target=_self onclick="lnkManageUsers_Click" OnClientClick="return GetPageURL();">Manage Users</asp:HyperLink>
+							        </li>
+									<li>
+									    <asp:LinkButton ID="lnkUserProfile" runat="server" PostBackUrl="Profile" onclick="lnkUserProfile_Click" OnClientClick="return GetPageURL();">Profile</asp:LinkButton>
+									</li>
+								</ul>
+							</li>
+							<li id="liDepartmentMenu" runat="server">
+								<a href="#">Department<span></span></a>
+							    <ul>
+							        <li>
+							            <asp:LinkButton Width="133px" ID="lnkManageDepartments" runat="server" PostBackUrl="ManageDepartments" onclick="lnkManageDepartments_Click"  OnClientClick="return GetPageURL();">Manage Department</asp:LinkButton>
+							        </li>
+							    </ul>
+							</li>
+                            <li id="liManageConsultant" runat="server">
+								<a href="#">Consultant<span></span></a>
+							    <ul>
+							        <li>
+							            <asp:LinkButton Width="133px" ID="lnkManageConsultant" href="ManageConsultant" runat="server" PostBackUrl="ManageConsultant" onclick="lnkManageConsultant_Click"  OnClientClick="return GetPageURL();">Manage Consultant</asp:LinkButton>
+							        </li>
+                                    <li>
+							            <asp:LinkButton Width="133px" ID="lnkInvPayment" href="InvoicePaymentDetails" runat="server" PostBackUrl="InvoicePaymentDetails" onclick="lnkInvPayment_Click"  OnClientClick="return GetPageURL();">Invoice Payments</asp:LinkButton>
+							        </li>
+							    </ul>
+							</li>
+
+							<li id="liClientMenu" runat="server">
+								<a href="#">Client<span></span></a>
+								<ul>
+									<li>
+									    <asp:LinkButton ID="lnkClient" runat="server" href="ManageClient" onclick="lnkClient_Click" OnClientClick="return GetPageURL();">Manage Client</asp:LinkButton>
+									</li>
+                                    <li>
+                                        <asp:LinkButton ID="lnkCurrency" runat="server"  href="ManageCurrency" onclick="lnkCurrency_Click" OnClientClick="return GetPageURL();">Manage Currency</asp:LinkButton>
+                                    </li>
+									<%--<li>
+									    <asp:LinkButton ID="lnkClientContact" runat="server"  href="ClientContact.aspx" onclick="lnkClientContact_Click">Client Contact</asp:LinkButton>
+									</li>--%>
+									<li>
+									    <asp:LinkButton ID="lnkContry" runat="server"  href="ManageCountry" onclick="lnkContry_Click" OnClientClick="return GetPageURL();">Manage Country</asp:LinkButton>
+									</li>
+									<li>
+									    <asp:LinkButton ID="lnkState" runat="server"  href="ManageState" onclick="lnkState_Click" OnClientClick="return GetPageURL();">Manage State</asp:LinkButton>
+									</li>
+									<li>
+									    <asp:LinkButton ID="lnkCity" runat="server"  href="ManageCity" onclick="lnkCity_Click" OnClientClick="return GetPageURL();">Manage City</asp:LinkButton>
+									</li>
+								</ul>
+							</li>
+							<li id="liInvoiceMenu" runat="server">
+								<a href="#">Invoice<span></span></a>
+								<ul>
+									<li>
+									    <asp:LinkButton Width="133px" ID="lnkNewInvoice" runat="server" href="NewInvoice" onclick="lnkNewInvoice_Click" OnClientClick="return GetPageURL();">New Invoice</asp:LinkButton>
+									</li>
+									<li>
+									    <asp:LinkButton Width="133px" ID="lnkViewInvoice" runat="server" href="ViewInvoice" onclick="lnkViewInvoice_Click" OnClientClick="return GetPageURL();">View Invoice</asp:LinkButton>
+									</li>
+									<li>
+									    <asp:LinkButton Width="133px" ID="lnkMatrixReport" runat="server" href="MonthwiseClientReport" onclick="lnkMatrixReport_Click" OnClientClick="return GetPageURL();">MonthlySummary</asp:LinkButton>
+									</li>
+									<li>
+									    <asp:LinkButton Width="133px" ID="lnkMonthlySales" runat="server" href="MonthlySales" onclick="lnkMonthlySales_Click" OnClientClick="return GetPageURL();">Monthly Sales</asp:LinkButton>
+									</li>
+                                    <li>
+									    <asp:LinkButton Width="133px" ID="lnkMonthlySalesNew" runat="server" href="MonthlySalesNew" onclick="lnkMonthlySalesNew_Click" OnClientClick="return GetPageURL();">All Monthly Sales</asp:LinkButton>
+									</li>
+
+                                    <li>
+									    <asp:LinkButton Width="133px" ID="lnkCommInv" runat="server" href="CommonClientInvoiceClient" onclick="lnkCommInv_Click" OnClientClick="return GetPageURL();">Download Invoice</asp:LinkButton>
+									</li>
+
+								</ul>
+							</li>
+                            <%--added by Shashikant Patel on 02-Nov-2020--%>
+                            <li id="liProformaInvoice" runat="server">
+								<a href="#">Proforma Invoice<span></span></a>
+								<ul>
+									<li>
+									    <asp:LinkButton Width="133px" ID="lnkProformaInvoice" runat="server" href="ProformaInvoice" onclick="lnkProformaInvoice_Click" OnClientClick="return GetPageURL();">NewProformaInvoice</asp:LinkButton>
+									</li>
+                                    <li>
+									    <asp:LinkButton Width="133px" ID="lnkViewProformaInvoice" runat="server" href="ViewProformaInvoice" OnClick="lnkViewProformaInvoice_Click" OnClientClick="return GetPageURL();">ViewProformaInvoice</asp:LinkButton>
+									</li>
+                                    </ul>
+                                </li>
+
+                           <li id="liPriceMenu" runat="server" visible="true">
+								<a href="#">Price<span></span></a>
+								<ul>
+									<li>
+									    <asp:LinkButton ID="lnkPrice" runat="server" href="Price.aspx" onclick="lnkPrice_Click" OnClientClick="return GetPageURL();">Price</asp:LinkButton>
+                                    </li>
+									<li>
+									    <asp:LinkButton ID="lnkPriceProcess" runat="server" href="PriceProcess.aspx" onclick="lnkPriceProcess_Click" OnClientClick="return GetPageURL();">Price Process</asp:LinkButton>
+									</li>
+									<li>
+									    <asp:LinkButton ID="lnkPriceType" runat="server" href="PriceType" onclick="lnkPriceType_Click" OnClientClick="return GetPageURL();">Price Type</asp:LinkButton>
+									</li>	
+								</ul>
+							</li>
+							<li>
+							    <asp:LinkButton ID="lbtnLogout" runat="server" Text="Logout" OnClick="lbtnLogout_Click" OnClientClick="return GetPageURL();"></asp:LinkButton>
+							</li>
+						</ul>
+					</nav>	
+					<br /><br /><br /><br />
+					
+					<asp:Panel ID="p2" runat="server" DefaultButton="btnSearch">
+					<div style="float:right">
+					    <asp:TextBox ID="txtSearch" runat="server" onkeypress="searchKeyPress(event);" 
+                            style="background-image:url(images/Search.png);background-position:left;background-repeat:no-repeat;padding-left:20px;" 
+                            Visible="false" Text="Search Invoice" 
+					    onfocus="if(this.value == 'Search Invoice') { this.value = ''; }" 
+					    onblur="if(this.value == '') { this.value = 'Search Invoice'; }" 
+                            ></asp:TextBox>
+					    <%--<asp:TextBoxWatermarkExtender ID="txtWSearch" runat="server" TargetControlID="txtSearch"
+                             WatermarkText="Search Invoice" WatermarkCssClass="watermarked" />--%>
+					    <asp:RegularExpressionValidator ID="revSearch" runat="server" Text="*" ErrorMessage="*" ValidationGroup="vgSearch12" ValidationExpression="^\d{0,45}[a-zA-z^]{0,1}$" ControlToValidate="txtSearch"></asp:RegularExpressionValidator>
+                    </div>
+                    <div style="display:none">
+                        <asp:Button ID="btnSearch" runat="server" onclick="btnSearch_Click" ValidationGroup="vgSearch12" />
+                    </div>  
+                    </asp:Panel>                
+                    <div style="float:right">
+                    <asp:Panel ID="p1" runat="server" DefaultButton="btnMasterSearch">
+                        <asp:TextBox ID="txtMasterSearch" runat="server" ToolTip="Search" style="background-image:url(images/Search.png);background-position:left;background-repeat:no-repeat;padding-left:20px;" Visible="false"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtWMasterSearch" runat="server" TargetControlID="txtMasterSearch"
+                             WatermarkText="Search" WatermarkCssClass="watermarked" />
+                             <asp:Button ID="btnMasterSearch" runat="server" OnClientClick="getSelText();" style="display:none;" onclick="btnMasterSearch_Click"/>
+                             </asp:Panel>
+                    </div>
+					<div class="cl"></div>
+				</header>
+                <!-- end of header -->
+                <div class="main" style="min-height: 450px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!-- end of main -->
+            </div>
+            <!-- end of container -->
+            <div class="footer" id="footermenu" runat="server">
+                <nav class="footer-nav">
+					<ul>
+						<li><asp:LinkButton ID="lnkFooterHome" runat="server" href="Home">Home</asp:LinkButton></li>
+						<li><asp:LinkButton ID="lnkFooterProfile" runat="server" href="Profile">Profile</asp:LinkButton></li>
+						<li><asp:LinkButton ID="lnkFooterDepartment" runat="server" href="ManageDepartments">Department</asp:LinkButton></li>
+						<li><asp:LinkButton ID="lnkFooterClient" runat="server" href="ManageClient">Client</asp:LinkButton></li>
+						<li><asp:LinkButton ID="lnkFooterInvoice" runat="server"
+                                onclick="lnkFooterInvoice_Click">Invoice</asp:LinkButton></li>
+						<li><asp:LinkButton ID="lnkFooterPrice" runat="server" href="Price.aspx" Visible="false">Price</asp:LinkButton></li>								
+						<li><asp:LinkButton ID="lnkFooterLogout" runat="server" Text="Logout" OnClick="lbtnLogout_Click"></asp:LinkButton></li>				
+					</ul>
+				</nav>
+            </div>
+        </div>
+        <!-- end of shell -->
+    </div>
+    <center>
+        <div style="background-color: #5D7B9D; width: 1150px; height: 20px; text-align: center;
+            -moz-border-radius: 5px; border-radius: 5px; vertical-align: middle; line-height: 1.5em;
+            margin-top: 25px;">
+            <div style="background-color: #5D7B9D; -moz-border-radius: 5px; border-radius: 5px;">
+                <div style="background-color: #5D7B9D; -moz-border-radius: 5px; border-radius: 5px;">
+                    <%--<span style="color: WhiteSmoke;">Copyright © 2013 </span>--%>
+                    <span style="color: WhiteSmoke;">Copyright &copy; <%= DateTime.Now.Year %> </span><a href="http://www.mangalaminfotech.com"
+                        target="_blank" class="Linkcss"><span>Mangalam Information Technologies Pvt. Ltd.</span>
+                    </a><span style="color: WhiteSmoke;">| </span><a href="http://www.mangalaminfotech.com"
+                        target="_blank"><span style="color: White;"></span></a><span style="color: White;">Developed
+                            by:</span>
+                    <asp:LinkButton ID="lnkSSD" runat="server" href="AboutUs.aspx" class="Linkcss">
+                        <span>System and Software Department (SSD)Team
+                        </span>
+                    </asp:LinkButton>
+                    <asp:Label ID="lblSSD" runat="server" Visible="false" ForeColor="WhiteSmoke">System and Software Department (SSD)</asp:Label>
+                </div>
+                <!-- end of templatemo_footer -->
+            </div>
+        </div>
+    </center>
+    </form>
+</body>
+</html>

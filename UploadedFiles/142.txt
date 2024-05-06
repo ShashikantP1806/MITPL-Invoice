@@ -1,0 +1,6 @@
+Page page = HttpContext.Current.Handler as Page;
+ScriptManager.RegisterStartupScript(page, page.GetType(), "RecordExist", "alert('EMP Code already Exist..!');", true);
+
+
+Page page = HttpContext.Current.Handler as Page;
+ScriptManager.RegisterStartupScript(page, page.GetType(), "New Request", "alert('New Record Submited...!');window.location='Request.aspx?r=" + Global.Encrypt(ReqNo) + "';", true);
